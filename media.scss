@@ -1,0 +1,26 @@
+@import "_variables/variables";
+@import "_mixins/mixins";
+
+@media (min-width: 768px) {
+  .kkb-container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .kkb-container {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .kkb-container {
+    max-width: 1280px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .kkb-container {
+    max-width: 1536px;
+  }
+}

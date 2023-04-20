@@ -1,0 +1,55 @@
+@import "../../_variables/variables";
+@import "../../_mixins/mixins";
+@import "../../animations/animate";
+
+.kkb-hero {
+  position: relative;
+  background-color: rgb(17, 19, 47);
+  padding: 8rem;
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    //transform: translate3d(100%, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &_animate {
+      animation-name: slideInRight;
+      animation-duration: 1550ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier($kkb-animation-timing);
+    }
+  }
+
+  &__row {
+    padding: 0 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  &__text-wrapper {
+    max-width: 40rem;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  &__subheading {
+    font: {
+      size: setFontSizeRem($kkb-rf-size, 48);
+      weight: 700;
+    };
+    line-height: 1rem;
+  }
+
+  &__text {
+    margin-top: 1.5rem;
+    font: {
+      size: setFontSizeRem($kkb-rf-size, 18);
+      weight: 600;
+    };
+    line-height: 2rem;
+  }
+}

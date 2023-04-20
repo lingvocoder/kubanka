@@ -1,0 +1,52 @@
+.kkb-button {
+  display: inline-flex;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  transition: background-color 0.25s 0s cubic-bezier(0.45, 0, 0.55, 1);
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: 500;
+  line-height: 1.25rem;
+  cursor: pointer;
+}
+.kkb-button_main {
+  justify-content: center;
+  width: 240px;
+  padding: 0.65rem 0.85rem;
+  border-color: transparent;
+  border-radius: 0.375rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(251, 204, 50);
+}
+.kkb-button_main:hover {
+  background-color: rgb(240, 185, 5);
+}
+.kkb-button_back {
+  width: 120px;
+  padding: 0.625rem 1rem;
+  column-gap: 0.5rem;
+  border-color: rgb(255, 255, 255);
+  border-radius: 9999px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+}
+.kkb-button_back:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-color: transparent;
+}
+.kkb-button__text_main {
+  font-size: 1rem;
+}
+.kkb-button__text_back {
+  font-size: 0.875rem;
+}
+.kkb-button__icon {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: rgb(255, 255, 255);
+}
+
+/*# sourceMappingURL=styles.css.map */

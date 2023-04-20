@@ -1,0 +1,65 @@
+@import "../../_variables/variables";
+@import "../../_mixins/mixins";
+
+.kkb-button {
+  display: inline-flex;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  transition: background-color 0.25s 0s cubic-bezier($kkb-animation-timing);
+  font: {
+    family: $kkb-font-support;
+    weight: 500;
+  };
+  line-height: 1.25rem;
+  cursor: pointer;
+
+  &_main {
+    justify-content: center;
+    width: 240px;
+    padding: 0.65rem 0.85rem;
+    border-color: transparent;
+    border-radius: 0.375rem;
+    text-align: center;
+    color: $kkb-main-color;
+    background-color: $kkb-sun-glow;
+
+    &:hover {
+      background-color: rgb(240, 185, 5);
+    }
+  }
+
+  &_back {
+    width: 120px;
+    padding: 0.625rem 1rem;
+    column-gap: 0.5rem;
+    border-color: $kkb-accent-color;
+    border-radius: 9999px;
+    color: $kkb-accent-color;
+    background-color: transparent;
+
+    &:hover {
+      background-color: rgb(255, 255, 255);
+      color: $kkb-main-color;
+      border-color: transparent;
+    }
+  }
+
+  &__text {
+
+    &_main {
+      font-size: setFontSizeRem($kkb-rf-size, 16);
+    }
+
+    &_back {
+      font-size: setFontSizeRem($kkb-rf-size, 14);
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+    stroke: $kkb-accent-color;
+  }
+}

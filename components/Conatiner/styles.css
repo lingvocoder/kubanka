@@ -1,0 +1,28 @@
+.kkb-container {
+  width: 100%;
+  padding: 0 2rem;
+  background-color: rgb(183, 173, 255);
+  margin: 0 auto;
+}
+.kkb-container__inner {
+  position: relative;
+  height: 80rem;
+  overflow: hidden;
+  opacity: 0.5;
+  border-width: 1px;
+  border-color: rgb(103, 83, 255);
+  border-style: dashed;
+}
+.kkb-container__bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  stroke: rgba(17, 24, 39, 0.1);
+}
+
+/*# sourceMappingURL=styles.css.map */
