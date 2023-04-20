@@ -9,45 +9,88 @@
     transform: translate3d(0, 0, 0);
   }
 }
+@keyframes zoomInRotate {
+  from {
+    opacity: 0;
+    transform: rotate(-270deg) scale3d(0.3, 0.3, 0.3);
+    visibility: visible;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
 .kkb-hero {
   position: relative;
-  background-color: rgb(17, 19, 47);
-  padding: 8rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: rgb(103, 83, 255);
   overflow: hidden;
+  color: rgb(255, 255, 255);
 }
-.kkb-hero__img {
+.kkb-hero__img-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: -35%;
+  right: -10%;
+  transform: scale(1.8);
+}
+.kkb-hero__img-wrapper {
   position: absolute;
-  top: 0;
-  right: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 100%;
 }
-.kkb-hero__img_animate {
-  animation-name: slideInRight;
+.kkb-hero__img-wrapper_underlay {
+  height: 100%;
+  background: url("../../assets/icons/small_ornament_ipoteka.svg") no-repeat center;
+  background-size: contain;
+}
+.kkb-hero__img-wrapper_animate {
   animation-duration: 1550ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
 }
-.kkb-hero__row {
-  padding: 0 2rem;
-  max-width: 80rem;
-  margin: 0 auto;
+.kkb-hero__img-wrapper_animate.kkb-hero__img-wrapper_underlay {
+  animation-name: zoomInRotate;
+}
+.kkb-hero__img-wrapper_animate.kkb-hero__img-wrapper_overlay {
+  animation-name: slideInRight;
+}
+.kkb-hero__img-wrapper_overlay {
+  top: 50%;
+  height: 40%;
+  width: 40%;
+  transform: scale(0.4);
+  left: 50%;
+  align-self: flex-end;
+  margin-left: -25%;
+  margin-top: 2%;
+  background: url("../../assets/images/img.png") no-repeat center;
+  background-size: contain;
 }
 .kkb-hero__text-wrapper {
-  max-width: 40rem;
-  margin-right: auto;
+  padding: 3rem;
+  flex: 1 1 50%;
   text-align: left;
 }
-.kkb-hero__subheading {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1rem;
+.kkb-hero__img-group {
+  flex: 1 1 50%;
+  position: relative;
+}
+.kkb-hero__row {
+  padding: 0 2rem;
+}
+.kkb-hero__title {
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 2.5rem;
 }
 .kkb-hero__text {
   margin-top: 1.5rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 2rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
