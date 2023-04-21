@@ -2,18 +2,89 @@
 @import "../../_mixins/mixins";
 @import "../../animations/animate";
 
+
+$modal-layer: 'modal';
+$under-layer: 'under';
+$default-layer: 'default';
+
 .kkb-hero {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   background-color: $kkb-main-bg-color;
   overflow: hidden;
   color: $kkb-accent-color;
 
+  &__inner {
+    position: relative;
+    display: flex;
+    height: 40vh;
+  }
+
+  &__banner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    &_tier1 {
+      z-index: getZIndex($modal-layer);
+    }
+
+    &_tier2 {
+      z-index: getZIndex($default-layer);
+    }
+
+    &_tier3 {
+      z-index: getZIndex($under-layer);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    &_left {
+      justify-content: start;
+    }
+
+    &_right {
+      justify-content: end;
+    }
+  }
+
+  &__content {
+    flex: 0 1 50%;
+    text-align: left;
+
+    &_left {
+      padding: 3rem;
+    }
+
+    &_right {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+    font: {
+      size: setFontSizeRem($kkb-rf-size, 42);
+      weight: 600;
+    };
+    line-height: 2.5rem;
+  }
+
+  &__text {
+    font: {
+      size: setFontSizeRem($kkb-rf-size, 15);
+      weight: 500;
+    };
+    line-height: 1.2rem;
+  }
+
   &__img-container {
     position: relative;
-    width: 100% ;
+    width: 100%;
     height: 100%;
     top: -35%;
     right: -10%;
@@ -26,7 +97,7 @@
 
     &_underlay {
       height: 100%;
-      background: url("../../assets/icons/small_ornament_ipoteka.svg") no-repeat center ;
+      background: url("../../assets/icons/small_ornament_ipoteka.svg") no-repeat center;
       background-size: contain;
     }
 
@@ -62,11 +133,6 @@
     }
   }
 
-  &__text-wrapper {
-    padding: 3rem;
-    flex: 1 1 50%;
-    text-align: left;
-  }
 
   &__img-group {
     flex: 1 1 50%;
@@ -77,20 +143,5 @@
     padding: 0 2rem;
   }
 
-  &__title {
-    font: {
-      size: setFontSizeRem($kkb-rf-size, 42);
-      weight: 600;
-    };
-    line-height: 2.5rem;
-  }
 
-  &__text {
-    margin-top: 1.5rem;
-    font: {
-      size: setFontSizeRem($kkb-rf-size, 15);
-      weight: 500;
-    };
-    line-height: 1.2rem;
-  }
 }

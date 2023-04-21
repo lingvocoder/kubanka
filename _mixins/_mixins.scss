@@ -15,8 +15,8 @@ $z-indexes: (
         'modal':1000,
         'dropdown':800,
         'flyout':800,
-        'default':20,
-        'under':-1,
+        'default':200,
+        'under':100,
 );
 /// Получение значения z-index из имени слоя
 /// @access public

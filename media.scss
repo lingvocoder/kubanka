@@ -1,13 +1,43 @@
 @import "_variables/variables";
 @import "_mixins/mixins";
 
-@media (min-width: 768px) {
+
+@media screen and (min-width: 640px) {
+
+  .kkb-hero {
+    flex-direction: column;
+    column-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .kkb-container {
     max-width: 768px;
   }
   .kkb-hero {
-    flex-direction: column;
-    column-gap: 1rem;
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      flex-grow: 1;
+
+      &_left {
+        padding: 1rem;
+      }
+    }
+
+    &__banner {
+      &_tier1 {
+        order: 2;
+      }
+    }
+
+    &__img-container {
+      right: -35%;
+      transform: scale(2);
+    }
   }
 }
 
